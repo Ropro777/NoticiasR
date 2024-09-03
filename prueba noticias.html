@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noticias del día</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: white;
+            color: black;
+        }
+        h2 {
+            color: blue;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .dropdown {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        select {
+            padding: 10px;
+            font-size: 16px;
+            border: 2px solid blue;
+            background-color: white;
+            color: blue;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h2>NOTICIAS DEL DÍA</h2>
+
+    <div class="dropdown">
+        <select name="noticias" id="noticias" onchange="irANoticia()">
+            <option value="">Seleccione una opción</option>
+            <option value="NoticiasNacionales.html">NOTICIAS NACIONALES</option>
+            <option value="NoticiasInternacionales.html">NOTICIAS INTERNACIONALES</option>
+            <option value="NoticiasDeportivas.html">NOTICIAS DEPORTIVAS</option>
+        </select>
+    </div>
+    <script>
+        function irANoticia() {
+            var Selection = document.getElementById("noticias").value;
+            if (Selection) {
+                window.open(Selection, '_blank');
+            }
+        }
+    </script>
+</body>
+</html>
